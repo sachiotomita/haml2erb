@@ -3,16 +3,48 @@
 haml2erb is a tool for converting [Haml](http://haml-lang.com/) to Erb markup.
 
 
+convert your haml files to erb with command
+
+
 ## Installing and loading haml2erb
 
-haml2erb is currently distributed as a Rails plugin.
 
-Simply move the main haml2erb directory into the vendor/plugins directory of your Rails application.
+
+```ruby
+gem 'haml2erb', :git => 'https://github.com/sachiotomita/haml2erb.git'
+```
+
+
+
+
+
 
 
 ## Using haml2erb
 
 Use the `haml2erb` command line or from Ruby call the `Haml2Erb.convert` method to have Haml markup translated into Erb.
+
+
+
+
+```ruby
+rails c
+```
+
+
+```ruby
+hamls = Dir["app/views/**/*.haml"];
+hamls.each do |haml| 
+  puts haml
+  erb = haml.sub(/\.haml$/, '.erb')
+  File.open(erb, 'w') do |file| 
+    file.write Haml2Erb.convert(File.read(haml)) 
+  end
+end
+```
+
+
+
 
 ### Example: Simple conversion
 

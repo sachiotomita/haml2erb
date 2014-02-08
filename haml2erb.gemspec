@@ -5,9 +5,9 @@ require 'haml2erb/version'
 Gem::Specification.new do |s|
   s.name        = 'haml2erb'
   s.version     = Haml2Erb::VERSION
-  s.authors     = ['Elia Schito']
-  s.email       = ['perlelia@gmail.com']
-  s.homepage    = ''
+  s.authors     = ['sachio tomita']
+  s.email       = ['sachio.tomita@gmail.com']
+  s.homepage    = 'http://sachiotomita.com'
   s.summary     = %q{Convert Haml templates to Erb!}
   s.description = %q{Converts Haml templates to Erb templates using the official Haml::Engine}
 
